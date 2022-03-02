@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 column span grid view</title>
+</head>
+<body>
+     <!-- two column span ========================================-->
+    <style>
+        .main_1 {
+            background-color: rgb(255, 248, 153);
+            width: 95%; 
+            max-width: 1000px; 
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .grid { 
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .grid > article {
+            box-shadow: 0 0 10px rgba(105, 105, 105, 0.3);
+        }
+
+        .grid > article img {
+            max-width: 100%;
+        }
+
+        .text {
+            padding: 0 20px 20px;
+        }
+
+        .text > button {
+            background: rgb(119, 24, 24);
+            border: 0;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        /* column span for the first card */
+        .grid > article:nth-child(1) {
+            grid-column: span 2;
+        }
+    </style>
+
+    <main class="main_1">
+        <div class="grid">
+            <!-- this will take 2 column width / 400px -->
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, doloremque?</p>
+                    <button>More</button>
+                </div>
+            </article>
+            
+            <!-- these will take only one column / 200px -->
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, doloremque?</p>
+                    <button>More</button>
+                </div>
+            </article>
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, doloremque?</p>
+                    <button>More</button>
+                </div>
+            </article>
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, doloremque?</p>
+                    <button>More</button>
+                </div>
+            </article>
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, doloremque?</p>
+                    <button>More</button>
+                </div>
+            </article>
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, doloremque?</p>
+                    <button>More</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+
+    <!-- two colum and two row span ====================================-->
+    <style>
+        .main_2 {
+            
+            background-color: rgb(196, 255, 199);
+            width: 95%; 
+            max-width: 1000px; 
+            margin: 4rem auto 2rem;
+            padding: 1rem;
+        }
+
+        .grid_2 { 
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .grid_2 > article {
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+        }
+
+        .grid_2 > article img {
+            max-width: 100%;
+        }
+
+        .grid_2 .text {
+            padding: 0 20px 20px;
+        }
+
+        .grid_2 .text > button {
+            background: gray;
+            border: 0;
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .grid_2 > article:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    </style>
+    <main class="main_2">
+        
+        <div class="grid_2">
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <h4>Going forward</h4>
+                    <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>More</button>
+                </div>
+            </article>
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+
+            <article>
+                <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg" alt="Sample photo">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore rerum necessitatibus nostrum, similique voluptas ipsum beatae itaque quod soluta quisquam a iste vel quasi pariatur eveniet totam est sint aperiam?</p>
+                    <button>Click Me</button>
+                </div>
+            </article>    
+        </div>
+    </main>
+</body>
+</html>
