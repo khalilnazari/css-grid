@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Item Placement</title>
+</head>
+<body>
+    
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 100px 600px 100px;
+            gap: 1rem;
+        }
+        
+        header {
+            grid-column: 1/13;
+        }
+
+        nav {
+            grid-column: 1/4;
+        }
+
+        main {
+            grid-column: 4/11;
+        }
+
+        .ads {
+            grid-column: 11/13;
+        }
+
+        footer {
+            grid-column: 1/13;
+        }
+
+
+        header, nav, main, .ads, footer {
+            background-color: brown;
+            padding: 1rem;
+            color: white;
+            font-size: 2rem;
+            display: grid;
+            place-items: center;
+        }
+
+
+        /* to make it responsive */
+        @media screen and (max-width: 850px) {
+            .container {
+                grid-template-rows: 100px 600px 100px 200px;
+            }
+            main {
+                grid-column: 4/13;
+            }
+            .ads {
+                grid-column: 1/13;
+            }
+        }
+
+
+        @media screen and (max-width: 770px) {
+            .container {
+                grid-template-rows: 100px 80px 600px 80px 200px;
+            }
+            main {
+                grid-column: 1/13;
+            }
+            nav {
+                grid-column: 1/13;
+            }
+        }
+    </style>
+    <div class="container">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <main>Main</main>
+        <div class="ads">Ads</div>
+        <footer>Footer</footer>
+    </div>
+
+
+
+    <style>
+        ul {
+            display: grid;
+            grid: auto-flow / auto 1fr;
+        }
+
+        li {
+            grid-column: span 2;
+            display: grid;
+            grid: subgrid;
+            border: solid;
+        }
+
+        label {
+            grid-column: 1;
+            background-color: aqua;
+            padding: 1rem;
+        }
+
+        input {
+            grid-column: 2;
+        }
+    </style>
+
+    <ul>
+        <li><label>Name:</label> <input name=fn>
+        <li><label>Address:</label> <input name=address>
+        <li><label>Phone:</label> <input name=phone>
+      </ul>
+</body>
+</html>
